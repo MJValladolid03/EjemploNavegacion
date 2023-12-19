@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/primeroFragment2">
+    <fragment
+        android:id="@+id/primeroFragment2"
+        android:name="com.marisma.ejemplonavegacion.PrimeroFragment"
+        android:label="fragment_primero"
+        tools:layout="@layout/fragment_primero" >
+        <action
+            android:id="@+id/action_primeroFragment2_to_segundoFragment2"
+            app:destination="@id/segundoFragment2" />
+        <action
+            android:id="@+id/action_primeroFragment2_to_terceroFragment2"
+            app:destination="@id/terceroFragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment2"
+        android:name="com.marisma.ejemplonavegacion.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" >
+        <action
+            android:id="@+id/action_segundoFragment2_to_cuartoFragment"
+            app:destination="@id/cuartoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terceroFragment2"
+        android:name="com.marisma.ejemplonavegacion.terceroFragment"
+        android:label="fragment_tercero"
+        tools:layout="@layout/fragment_tercero" />
+    <fragment
+        android:id="@+id/cuartoFragment"
+        android:name="com.marisma.ejemplonavegacion.cuartoFragment"
+        android:label="fragment_cuarto"
+        tools:layout="@layout/fragment_cuarto" />
+</navigation>
